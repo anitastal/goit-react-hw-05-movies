@@ -23,6 +23,6 @@ export function SearchForm({ getFormData }) {
     </form>
   );
 }
-SearchForm.protoTypes = {
+SearchForm.propTypes = {
   getFormData: PropTypes.func.isRequired,
 };
