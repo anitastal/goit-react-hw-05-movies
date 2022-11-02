@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/anitastal/goit-react-hw-05-movies.git/static/css/main.86f178e4.css",
+    "main.js": "/anitastal/goit-react-hw-05-movies.git/static/js/main.64158777.js",
+    "index.html": "/anitastal/goit-react-hw-05-movies.git/index.html",
+    "main.86f178e4.css.map": "/anitastal/goit-react-hw-05-movies.git/static/css/main.86f178e4.css.map",
+    "main.64158777.js.map": "/anitastal/goit-react-hw-05-movies.git/static/js/main.64158777.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86f178e4.css",
+    "static/js/main.64158777.js"
+  ]
+}
