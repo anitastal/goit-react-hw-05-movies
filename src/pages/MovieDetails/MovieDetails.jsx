@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
 import { getMoviesById } from '../../helpers/Api';
 import { useEffect, useState } from 'react';
 import css from './MovieDetails.module.css';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const [movieItem, setMovieItem] = useState(null);
   const { movieId } = useParams();
 
@@ -51,21 +51,24 @@ export const MovieDetails = () => {
 
             <ul>
               <li className={css.list}>
-                <Link to="cast" state={{ from: location.state.from }}>
+                <Link to="cast" state={{ from: location?.state?.from }}>
                   Cast
                 </Link>
               </li>
 
               <li className={css.list}>
-                <Link to="reviews" state={{ from: location.state.from }}>
+                <Link to="reviews" state={{ from: location?.state?.from }}>
                   Reviews
                 </Link>
               </li>
             </ul>
-            <Outlet />
+            <Suspense>
+              <Outlet />
+            </Suspense>
           </div>
         )}
       </div>
     </>
   );
 };
+export default MovieDetails;

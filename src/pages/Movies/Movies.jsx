@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import css from './Movies.module.css';
 
-export const Movies = () => {
+const Movies = () => {
   const [movie, setMovie] = useState(null);
   // const [query, setQuery] = useState(null);
   const [params, setParams] = useSearchParams();
@@ -24,10 +24,10 @@ export const Movies = () => {
     setParams({ query: data });
   };
 
-  const getFilmOnClick = e => {
-    e.preventDefault();
-    setMovie(e.target.id);
-  };
+  // const getFilmOnClick = e => {
+  //   e.preventDefault();
+  //   setMovie(e.target.id);
+  // };
 
   return (
     <>
@@ -35,7 +35,7 @@ export const Movies = () => {
       {movie && (
         <ul>
           {movie?.map(item => (
-            <li key={item.id} onClick={getFilmOnClick}>
+            <li key={item.id}>
               <Link
                 to={`${item.id}`}
                 state={{ from: location }}
@@ -51,3 +51,5 @@ export const Movies = () => {
     </>
   );
 };
+
+export default Movies;

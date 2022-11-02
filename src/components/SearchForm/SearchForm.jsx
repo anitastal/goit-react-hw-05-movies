@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import css from './SearchForm.module.css';
 
 export function SearchForm({ getFormData }) {
@@ -22,3 +23,6 @@ export function SearchForm({ getFormData }) {
     </form>
   );
 }
+SearchForm.protoTypes = {
+  getFormData: PropTypes.func.isRequired,
+};
